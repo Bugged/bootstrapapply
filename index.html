@@ -4,6 +4,19 @@
 <div class="d-flex justify-content-center">
 <div class="col-lg-4">
   
+  <legend>Course Selection?</legend>
+
+<div class="dropdown">
+  <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Select Course
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">12-Week Front-End (part-time)</a>
+    <a class="dropdown-item" href="#">1 Month Accelerated (full-time)</a>
+    <a class="dropdown-item" href="#">3 Month Full Stack (full-time)</a>
+  </div>
+</div>
+
 
 <form>
   <fieldset>
@@ -23,142 +36,8 @@
 		<option value="10" >Python 4 Week (part-time)</option>
     </select>
   </div>
-  
-<div class="form-group">
-  <legend>Course Date?</legend>
-    <select class="form-control" id="selectdate">
-		<option value="01-09-2017" >01-09-2017</option>
-		<option value="23-09-2017" >23-09-2017</option>
-		<option value="3" >3 Month Full Stack (full-time)</option>
-    </select>
-</div>
-</fieldset>
 
-<fieldset>
-<div class="form-group">
-   <legend>Name and Surname?</legend>
-    <input type="text" class="form-control" name="fname" id="fname" placeholder="Name Surname">
-    <span id="fname_error" class="error"></span>
-</div>
-
-<div class="form-group">
-  <legend>Email address?</legend>
-    <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email">
-    <span id="email_error" class="error"></span>
-</div>
-
-<div class="form-group">
-  <legend>Telephone?</legend>
-    <input class="form-control" type="tel" value="" name="phone" id="phone" placeholder="Phone number" required>
-   <span id="phone_error" class="error"></span>
-</div>
-</fieldset>
-
-<fieldset class="form-group">
-    <legend>Have you done some coding before?</legend>
-	<div class="form-check">
-	  <label class="form-check-label">
-		<input class="form-check-input" type="checkbox" name="experience[]" value="none">
-		None
-	  </label>
-	</div>
-	<div class="form-check">
-	  <label class="form-check-label">
-		<input class="form-check-input" type="checkbox" name="experience[]" value="htmlcss">
-		HTML/CSS
-	  </label>
-	</div>
-	<div class="form-check">
-	  <label class="form-check-label">
-		<input class="form-check-input" type="checkbox" name="experience[]" value="php">
-		PHP
-	  </label>
-	</div>
-	<div class="form-check">
-	  <label class="form-check-label">
-		<input class="form-check-input" type="checkbox" name="experience[]" value="sql">
-		SQL
-	  </label>
-	</div>
-	<div class="form-check">
-	  <label class="form-check-label">
-		<input class="form-check-input" type="checkbox" name="experience[]" value="javascript">
-		Javascript
-	  </label>
-	</div>
-  <div class="form-check">
-	  <label class="form-check-label">
-		<input class="form-check-input" type="checkbox" name="experience[]" value="python">
-		Python
-	  </label>
-	</div>
-  <div class="form-check">
-	  <label class="form-check-label">
-		<input class="form-check-input" type="checkbox" name="experience[]" value="c">
-		C
-	  </label>
-	</div>
-  <div class="form-check">
-	  <label class="form-check-label">
-		<input class="form-check-input" type="checkbox" name="experience[]" value="other">
-		Other
-	  </label>
-	</div>
-</fieldset>
-
-<!-- Multiple Radios --> 
-<fieldset class="form-group">
-    <legend>How did you hear about us?</legend>
-  <div class="form-check">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="source" id="source1" value="facebook" checked>
-        Facebook
-      </label>
-    </div>
-    <div class="form-check">
-    <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="source" id="source2" value="Google">
-        Google
-      </label>
-    </div>
-    <div class="form-check">
-    <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="source" id="source3" value="linked-in">
-        Linked-in
-      </label>
-    </div>
-    <div class="form-check">
-    <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="source" id="source4" value="events">
-        Events
-      </label>
-    </div>
-    <div class="form-check">
-    <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="source" id="source5" value="radio">
-        Radio
-      </label>
-    </div>
-    <div class="form-check">
-    <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="source" id="source6" value="other">
-        Other
-      </label>
-    </div>
-  
-</fieldset>
-
-
-
-<!-- Code to guard against multiple submission of the same form -->
-<?php 
-    $unique_id = uniqid(microtime(), 1);
-?>
-<input type="hidden" name="unique_id" value="<?=$unique_id?>">
-<!-- -->
-
-<input type="submit" value="Submit your application" name="submitted" class="btn btn-success"/>
-
+<input type="submit" value="Continue" name="submitted" class="btn btn-success"/>
 </form>
 </div>
 </div>
