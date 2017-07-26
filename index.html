@@ -1,43 +1,229 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="d-flex justify-content-center">
-<div class="col-lg-4">
-  
-  <legend>Course Selection?</legend>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<div class="dropdown">
-  <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Select Course
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">12-Week Front-End (part-time)</a>
-    <a class="dropdown-item" href="#">1 Month Accelerated (full-time)</a>
-    <a class="dropdown-item" href="#">3 Month Full Stack (full-time)</a>
-  </div>
-</div>
+    <link rel="stylesheet" type="text/css" href="https://www.codemasterinstitute.com/assets/css/fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="https://www.codemasterinstitute.com/assets/js/jquery.js"></script>
+    <script type="text/javascript" src="https://www.codemasterinstitute.com/assets/js/validate.js"></script>
+    <script type="text/javascript" src="https://www.codemasterinstitute.com/assets/js/subscribe.js"></script>
+    <script type="text/javascript" src="https://www.codemasterinstitute.com/assets/js/init.js"></script>
+    <!-- LIBRARIES -->
+    <script type="text/javascript" src="https://www.codemasterinstitute.com/assets/js/wow.min.js"></script>
+</head>
+
+<body class="container">
+
+    <!-- APPLY PAGE START -->
 
 
-<form>
-  <fieldset>
-  <div class="form-group">
-    <legend>Course Selection?</legend>
-    <select class="form-control" id="selectcourse">
-		<option selected>Select Course</option>
-		<option value="1" >12-Week Front-End (part-time)</option>
-		<option value="2" >1 Month Accelerated (full-time)</option>
-		<option value="3" >3 Month Full Stack (full-time)</option>
-		<option value="4" >Back end 4 Week (part-time)</option>
-		<option value="5" >WordPress 4 Week (part-time)</option>
-		<option value="6" >VR Game Dev 4 Week (part-time)</option>
-		<option value="7" >3D models / printing 4 Week (part-time)</option>
-		<option value="8" >Mobile Apps 4 Week (part-time)</option>
-		<option value="9" >Robotic Programming 4 Week (part-time)</option>
-		<option value="10" >Python 4 Week (part-time)</option>
-    </select>
-  </div>
 
-<input type="submit" value="Continue" name="submitted" class="btn btn-success"/>
-</form>
-</div>
-</div>
+    <!-- Custom Bootstrap styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+    <div class="d-flex p-2 justify-content-center">
+
+        <div class="p-2 col-md-6 ">
+            <div class="p-2 row justify-content-center">
+                <a href="https://codemasterinstitute.com/home" class="brand">
+                    <img src="https://codemasterinstitute.com/assets/icons/logo2.png" alt="logo" />
+                </a>
+            </div>
+            <div class="p-2 ">
+                <a class="btn btn-danger" href="https://www.codemasterinstitute.com/home" role="button">Back</a>
+            </div>
+
+            <div class="p-2 ">
+                <form>
+                    <fieldset>
+                        <div class="form-group">
+                            <legend>Course Selection</legend>
+                            <select class="form-control" id="course_type" name="course_type">
+                    <option selected>Select Course</option>
+                    <option value="FrontEnd">12-Week Front-End (part-time)</option>
+                    <option value="FullTime">1 Month Accelerated (full-time)</option>
+                    <option value="Full_Stack">3 Month Full Stack (full-time)</option>
+                    <option value="BackEnd">Back end 4 Week (part-time)</option>
+                    <option value="WordPress">WordPress 4 Week (part-time)</option>
+                    <option value="VR">VR Game Dev 4 Week (part-time)</option>
+                    <option value="3D">3D models / printing 4 Week (part-time)</option>
+                    <option value="Mobile">Mobile Apps 4 Week (part-time)</option>
+                    <option value="C">Robotic Programming 4 Week (part-time)</option>
+                    <option value="Python">Python 4 Week (part-time)</option>
+                    </select>
+                        </div>
+
+                        <!-- To allocate a number to a course type, full time, part time, or short course -->
+                        <div class="form-group" style="display : none;">
+
+                            <select class="form-control" id="course" name="course">
+                                <option value="1" selected></option>
+                                <option value="2"></option>
+                                <option value="3"></option>
+                          </select>
+                        </div>
+
+                        <!-- Contact me yes -->
+                        <div class="form-group" style="display : none;">
+                            <input class="form-control" type="number" value="1" id="counsellor" name="counsellor">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <!-- Start Date -->
+                        <div class="form-group">
+                            <legend>Start Date</legend>
+                            <select class="form-control" id="date" name="date">
+                    <option value="phpCode" selected>PHPCode maybe have page to submit course first to get dates</option>
+                             </select>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend for="fname">Enter your details</legend>
+                        <div class="form-group">
+                            <label for="fname">Enter your full name</label>
+                            <input class="form-control" type="text" name="fname" value="Name and surname" required/>
+                            <span id="fname_error" class="error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Enter your email address</label>
+                            <input class="form-control" type="email" name="email" value="Your email" required/>
+                            <span id="email_error" class="error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Enter your phone number</label>
+                            <input class="form-control" type="tel" name="phone" value="Your number" required/>
+                            <span id="phone_error" class="error"></span>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <!-- Prior coding experience -->
+                        <div class="form-group">
+                            <legend>Prior coding experience</legend>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input" name="experience[]" value="none" >
+                                  None
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input" name="experience[]" value="htmlcss" >
+                                  HTML/CSS
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input" name="experience[]" value="javascript" >
+                                  JavaScript
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input" name="experience[]" value="php" >
+                                  PHP
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input" name="experience[]" value="sql" >
+                                  SQL
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input" name="experience[]" value="python" >
+                                  Python
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input" name="experience[]" value="c" >
+                                  C programming
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input" name="experience[]" value="other" >
+                                  Other
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Education not asked -->
+                        <div class="form-group" style="display : none;">
+                            <input class="form-control" type="text" value="0" id="education" name="education">
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <!-- How did you hear about us -->
+                        <div class="form-group">
+                            <legend>How did you hear about us</legend>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="source" id="source" value="facebook">
+                                Facebook
+                              </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="source" id="source" value="google">
+                                Google
+                              </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="source" id="source" value="linked-in">
+                                Linked-in
+                              </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="source" id="source" value="events">
+                                Events
+                              </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="source" id="source" value="radio">
+                                Radio
+                              </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="source" id="source" value="other">
+                                Other
+                              </label>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <input type="submit" value="Submit" name="submitted" class="btn btn-success " />
+                    </fieldset>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- END OF APPLY PAGE -->
+</body>
+
+</html>
